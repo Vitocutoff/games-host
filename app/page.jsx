@@ -4,19 +4,20 @@ export default function HeroSwitch() {
     <section
       className="w-screen h-screen flex
                  justify-center items-center
-                 bg-neutral-900"
+                 bg-gradient-to-r from-neutral-400
+                 via-neutral-300 to-neutral-400"
     >
 
       {/* Contenitore con proporzioni fisse */}
       <div
-        className="relative w-[95vw] aspect-[2.35/1]
+        className="relative w-[98vw] aspect-[2.35/1]
                    flex bg-black rounded-[3rem]
                    shadow-2xl overflow-hidden"
       >
 
         {/* Joy-Con sinistro */}
         <div
-          className="w-[15%] bg-[#009ACD] flex
+          className="w-[10%] bg-sky-500 flex
                      flex-col justify-between
                      items-center p-4 rounded-l-[3rem]"
         >
@@ -88,7 +89,7 @@ export default function HeroSwitch() {
 
         {/* Joy-Con destro */}
         <div
-          className="w-[15%] bg-[#E60012] flex
+          className="w-[10%] bg-orange-400 flex
                      flex-col justify-between
                      items-center p-4 rounded-r-[3rem]"
         >
