@@ -1,164 +1,73 @@
-export default function HeroSwitch() {
+export default function Page() {
   return (
-
-    <section
-      className="w-screen h-screen flex
-                 justify-center items-center
-                 bg-gradient-to-r from-neutral-400
-                 via-neutral-300 to-neutral-400"
+    <main
+      className="relative min-h-screen w-full
+                 flex items-center justify-center
+                 overflow-hidden bg-neutral-900"
     >
 
-      {/* Contenitore con proporzioni fisse */}
+      {/* --- sfondo 3D dinamico --- */}
       <div
-        className="relative w-[98vw] aspect-[2.35/1]
-                   flex bg-black rounded-[3rem]
-                   shadow-2xl overflow-hidden"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,_rgba(0,0,0,1)_0%,_rgba(30,30,30,1)_35%,_rgba(10,10,10,1)_100%)]"
+      />
+
+      <div
+        className="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,_rgba(255,255,255,0.05),_transparent_60%)]"
+      />
+
+      <div
+        className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_rgba(255,255,255,0.03),_transparent_60%)]"
+      />
+
+      <div
+        className="absolute bottom-[8%] left-1/2 -translate-x-1/2 w-[80vw] h-[20vh] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.6),_transparent_70%)] blur-3xl"
+      />
+
+      {/* --- la tua Switch, esattamente come l’avevi --- */}
+      <div
+        className="relative w-[98%] max-w-[1800px]
+                   aspect-[16/7] flex items-center
+                   justify-center"
       >
 
-        {/* Joy-Con sinistro */}
+        {/* joy-con sinistro */}
         <div
-          className="w-[10%] bg-sky-500 flex
-                     flex-col justify-between
-                     items-center p-4 rounded-l-[3rem]"
+          className="absolute left-0 top-0 h-full
+                     w-[12%] bg-gradient-to-br
+                     from-[#2a8ca7] to-[#1f6b82]
+                     rounded-l-[2rem]"
+        />
+
+        {/* schermo */}
+        <div
+          className="relative z-10 w-[76%] h-[98%]
+          bg-gradient-to-br from-[#1e1e1e]
+          to-[#0f0f0f] rounded-xl flex items-center
+          justify-center shadow-inner border
+          border-neutral-700"
         >
 
-          {/* Stick analogico */}
-          <div
-            className="w-12 h-12 bg-black
-                       rounded-full shadow-inner"
-          ></div>
-
-          {/* D-Pad */}
-          <div
-            className="grid grid-cols-3 gap-1"
+          <span
+            className="text-white text-2xl font-light
+                       tracking-widest"
           >
 
-            <div></div>
+            Nintendo Switch Interface
 
-            <div
-              className="w-4 h-4 bg-black
-                         rounded"
-            ></div>
-
-            <div></div>
-
-            <div
-              className="w-4 h-4 bg-black
-                         rounded"
-            ></div>
-
-            <div
-              className="w-4 h-4 bg-black
-                         rounded"
-            ></div>
-
-            <div
-              className="w-4 h-4 bg-black
-                         rounded"
-            ></div>
-
-            <div></div>
-
-            <div
-              className="w-4 h-4 bg-black
-                         rounded"
-            ></div>
-
-            <div></div>
-
-          </div>
-
-          {/* Pulsantino inferiore */}
-          <div
-            className="w-6 h-6 bg-black
-                       rounded-full opacity-80"
-          ></div>
+          </span>
 
         </div>
 
-        {/* Schermo centrale */}
+        {/* joy-con destro */}
         <div
-          className="flex-1 bg-neutral-950 flex
-                     items-center justify-center
-                     text-white text-3xl"
-        >
-
-          Hero Switch – Schermo Centrale
-          
-        </div>
-
-        {/* Joy-Con destro */}
-        <div
-          className="w-[10%] bg-orange-400 flex
-                     flex-col justify-between
-                     items-center p-4 rounded-r-[3rem]"
-        >
-
-          {/* Stick analogico */}
-          <div
-            className="w-12 h-12 bg-black
-                       rounded-full shadow-inner"
-          ></div>
-          
-          {/* Pulsanti A B X Y */}
-          <div
-            className="grid grid-cols-2 gap-2"
-          >
-
-            <div
-              className="w-6 h-6 bg-black
-                         rounded-full flex
-                         items-center justify-center
-                         text-xs text-white"
-            >
-              X
-            </div>
-
-            <div></div>
-
-            <div
-              className="w-6 h-6 bg-black
-                         rounded-full flex
-                         items-center justify-center
-                         text-xs text-white"
-            >
-              Y
-            </div>
-
-            <div
-              className="w-6 h-6 bg-black
-                         rounded-full flex
-                         items-center
-                         justify-center text-xs
-                         text-white"
-            >
-              A
-            </div>
-
-            <div></div>
-
-            <div
-              className="w-6 h-6 bg-black
-                         rounded-full flex
-                         items-center
-                         justify-center text-xs
-                         text-white"
-            >
-              B
-            </div>
-
-          </div>
-
-          {/* Pulsantino inferiore */}
-          <div
-            className="w-6 h-6 bg-black
-                       rounded-full opacity-80"
-          ></div>
-
-        </div>
+          className="absolute right-0 top-0 h-full
+                     w-[12%] bg-gradient-to-br
+                     from-[#f25c5c] to-[#b94141]
+                     rounded-r-[2rem]"
+        />
 
       </div>
 
-    </section>
+    </main>
   );
 }
