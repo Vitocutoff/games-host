@@ -30,17 +30,74 @@ export default function Page() {
                    justify-center"
       >
 
-        {/* joy-con sinistro */}
-        <div
-          className="absolute left-0 top-0 h-full
-                     w-[12%] bg-gradient-to-br
-                     from-[#2a8ca7] to-[#1f6b82]
-                     rounded-l-[2rem]"
-        />
+        {/* joy-con sinistro rifinito */}
+<div
+  className="absolute left-0 top-0 h-full w-[12%]
+             bg-gradient-to-br from-[#2a8ca7] to-[#1f6b82]
+             rounded-l-[2rem] flex flex-col items-center
+             justify-center overflow-hidden"
+>
+
+  {/* tasto meno (più largo che alto, fessura sottile) */}
+  <div
+    className="absolute top-[6%] right-[16%]
+               w-[30%] h-[4%]
+               bg-gradient-to-b from-[#181818] to-[#020202]
+               rounded-md shadow-[inset_1px_1px_3px_rgba(255,255,255,0.25),_0_2px_3px_rgba(0,0,0,0.8)]"
+  />
+
+  {/* levetta analogica (più in alto) */}
+  <div
+    className="w-[50%] aspect-square bg-gradient-to-b
+               from-[#202020] to-[#060606]
+               rounded-full shadow-[inset_2px_2px_4px_rgba(255,255,255,0.15),_inset_-2px_-2px_6px_rgba(0,0,0,0.7)]
+               mt-[0%] mb-[6%]"
+  />
+
+  {/* croce direzionale (più distanziata) */}
+  <div className="relative w-[62%] aspect-square mb-[10%]">
+    {[
+      { dir: "up", cls: "top-[6%] left-1/2 -translate-x-1/2" },
+      { dir: "down", cls: "bottom-[6%] left-1/2 -translate-x-1/2" },
+      { dir: "left", cls: "left-[6%] top-1/2 -translate-y-1/2" },
+      { dir: "right", cls: "right-[6%] top-1/2 -translate-y-1/2" },
+    ].map((btn) => (
+      <div
+        key={btn.dir}
+        className={`absolute ${btn.cls} w-[35%] aspect-square
+                    bg-gradient-to-b from-[#1b1b1b] to-[#0a0a0a]
+                    rounded-full flex items-center justify-center
+                    shadow-[inset_1px_1px_3px_rgba(255,255,255,0.15),_0_2px_3px_rgba(0,0,0,0.6)]`}
+      >
+        <span
+          className="text-neutral-400 text-[0.6rem]
+                     select-none"
+        >
+          {btn.dir === "up"
+            ? "▲"
+            : btn.dir === "down"
+            ? "▼"
+            : btn.dir === "left"
+            ? "◀"
+            : "▶"}
+        </span>
+      </div>
+    ))}
+  </div>
+
+  {/* tasto quadrato inferiore (più piccolo) */}
+  <div
+    className="w-[16%] aspect-square bg-gradient-to-b
+               from-[#1b1b1b] to-[#0a0a0a]
+               rounded-md shadow-[inset_1px_1px_3px_rgba(255,255,255,0.15),_0_2px_3px_rgba(0,0,0,0.6)]
+               ml-[40%]"
+  />
+</div>
+
 
         {/* schermo */}
         <div
-          className="relative z-10 w-[76%] h-[98%]
+          className="relative z-10 w-[76%] h-[99%]
           bg-gradient-to-br from-[#1e1e1e]
           to-[#0f0f0f] rounded-xl flex items-center
           justify-center shadow-inner border
