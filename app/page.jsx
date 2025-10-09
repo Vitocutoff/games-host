@@ -40,8 +40,8 @@ export default function Page() {
 
   {/* tasto meno (più largo che alto, fessura sottile) */}
   <div
-    className="absolute top-[6%] right-[16%]
-               w-[30%] h-[4%]
+    className="absolute top-[5%] right-[10%]
+               w-[25%] h-[1%]
                bg-gradient-to-b from-[#181818] to-[#020202]
                rounded-md shadow-[inset_1px_1px_3px_rgba(255,255,255,0.25),_0_2px_3px_rgba(0,0,0,0.8)]"
   />
@@ -51,16 +51,16 @@ export default function Page() {
     className="w-[50%] aspect-square bg-gradient-to-b
                from-[#202020] to-[#060606]
                rounded-full shadow-[inset_2px_2px_4px_rgba(255,255,255,0.15),_inset_-2px_-2px_6px_rgba(0,0,0,0.7)]
-               mt-[0%] mb-[6%]"
+               mt-[-35%] mb-[25%]"
   />
 
   {/* croce direzionale (più distanziata) */}
-  <div className="relative w-[62%] aspect-square mb-[10%]">
+  <div className="relative w-[62%] aspect-square mb-[15%]">
     {[
-      { dir: "up", cls: "top-[6%] left-1/2 -translate-x-1/2" },
-      { dir: "down", cls: "bottom-[6%] left-1/2 -translate-x-1/2" },
-      { dir: "left", cls: "left-[6%] top-1/2 -translate-y-1/2" },
-      { dir: "right", cls: "right-[6%] top-1/2 -translate-y-1/2" },
+      { dir: "up", cls: "top-[-5%] left-1/2 -translate-x-1/2" },
+      { dir: "down", cls: "bottom-[-5%] left-1/2 -translate-x-1/2" },
+      { dir: "left", cls: "left-[-5%] top-1/2 -translate-y-1/2" },
+      { dir: "right", cls: "right-[-5%] top-1/2 -translate-y-1/2" },
     ].map((btn) => (
       <div
         key={btn.dir}
@@ -70,7 +70,7 @@ export default function Page() {
                     shadow-[inset_1px_1px_3px_rgba(255,255,255,0.15),_0_2px_3px_rgba(0,0,0,0.6)]`}
       >
         <span
-          className="text-neutral-400 text-[0.6rem]
+          className="text-neutral-400 text-[0.7rem]
                      select-none"
         >
           {btn.dir === "up"
@@ -109,7 +109,7 @@ export default function Page() {
                        tracking-widest"
           >
 
-            Nintendo Switch Interface
+            Nintendo Switch Games
 
           </span>
 
