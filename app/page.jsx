@@ -35,7 +35,7 @@ export default function Page() {
 
       {/* SWITCH */}
       <div
-        className="relative w-[98%] max-w-[1800px]
+        className="relative w-[96%] max-w-[1800px]
                    aspect-[16/7] flex items-center
                    justify-center"
       >
