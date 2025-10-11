@@ -6,22 +6,49 @@ import Screen from "@/components/Screen";
 import JoyconRight from "@/components/JoyconRight";
 
 const joyconColors = [
-  { from: "#2a8ca7", to: "#1f6b82" }, // blu
-  { from: "#f25c5c", to: "#b94141" }, // rosso
-  { from: "#00b894", to: "#01997b" }, // verde
-  { from: "#fd79a8", to: "#e84393" }, // rosa
-  { from: "#f1c40f", to: "#d4ac0d" }, // giallo
-  { from: "#9b59b6", to: "#8e44ad" }, // viola
-  { from: "#e67e22", to: "#d35400" }, // arancione
-  { from: "#7f8c8d", to: "#2c3e50" }, // grigio
-  { from: "#ecf0f1", to: "#bdc3c7" }, // bianco
-  { from: "#1abc9c", to: "#16a085" }, // turchese
-  { from: "#e74c3c", to: "#c0392b" }, // rosso scuro
-  { from: "#3498db", to: "#2980b9" }, // blu chiaro
-  { from: "#f39c12", to: "#e67e22" }, // arancio chiaro
-  { from: "#8e44ad", to: "#71368a" }, // viola scuro
-  { from: "#2ecc71", to: "#27ae60" }, // verde chiaro
-  { from: "#34495e", to: "#2c3e50" }, // blu notte
+  { from: "#828282", to: "#0F0F0F" }, // GRIGIO
+  { from: "#FF3C28", to: "#1E0A0A" }, // NEON ROSSO
+  { from: "#0AB9E6", to: "#001E1E" }, // NEON BLU
+  { from: "#E6FF00", to: "#142800" }, // NEON GIALLO
+  { from: "#1EDC00", to: "#002800" }, // NEON VERDE
+  { from: "#FF3278", to: "#28001E" }, // NEON ROSA
+  { from: "#B400E6", to: "#140014" }, // NEON VIOLA
+  { from: "#FF7F00", to: "#4A2C00" }, // NEON ARANCIONE
+  { from: "#E10F00", to: "#280A0A" }, // ROSSO
+  { from: "#1473FA", to: "#00000F" }, // BLU
+  { from: "#96F5F5", to: "#0A1E28" }, // BLU PASTELLO
+  { from: "#82FF96", to: "#0A1E0A" }, // VERDE PASTELLO
+  { from: "#B28DFF", to: "#4A1F6E" }, // VIOLA PASTELLO
+  { from: "#FFB6C1", to: "#4A1F6E" }, // ROSA PASTELLO
+  { from: "#FFDC00", to: "#322800" }, // GIALLO PIKACHU
+  { from: "#C88C32", to: "#281900" }, // MARRONE EEVEE
+  { from: "#D7AA73", to: "#1E1914" }, // LABO CREATORS CONTEST
+  { from: "#1473FA", to: "#00000F" }, // BLU REALE DRAGON QUEST XI S
+  { from: "#B400E6", to: "#140014" }, // VIOLA DISNEY TSUM TSUM
+  { from: "#FF3278", to: "#28001E" }, // ROSA DISNEY TSUM TSUM
+  { from: "#F07341", to: "#322D1E" }, // SCARLATTO POKEMON SCARLATTO
+  { from: "#500FC8", to: "#00051E" }, // VIOLA POKEMON VIOLETTO
+  { from: "#E6E6E6", to: "#323232" }, // BIANCO OLED
+  { from: "#6455F5", to: "#28282D" }, // BLU SPLATOON 3
+  { from: "#C3FA05", to: "#1E1E28" }, // GIALLO SPLATOON 3
+  { from: "#F04614", to: "#1E1914" }, // ROSSO MARIO RED X BLUE
+  { from: "#2D50F0", to: "#1E0F46" }, // BLU ZELDA SKYWARD SWORD
+  { from: "#500FC8", to: "#00051E" }, // VIOLA ZELDA SKYWARD SWORD
+  { from: "#FF6E00", to: "#0B0014" }, // METROID PRIME (ARANCIONE PLASMA CON RIFLESSO SCURO)
+  { from: "#00E6B8", to: "#003C28" }, // ZELDA TEARS OF THE KINGDOM (VERDE/BLU ETEREO)
+  { from: "#FF003C", to: "#141414" }, // MARIO KART 8 DELUXE (ROSSO CORSA E NERO GOMME)
+  { from: "#B4F2B0", to: "#20502A" }, // ANIMAL CROSSING (VERDE PASTELLO E FOGLIA)
+  { from: "#6B00B8", to: "#140028" }, // SPLATOON INK PURPLE (VIOLA NEON, INCHIOSTRO)
+  { from: "#FFB4D6", to: "#3C0A1E" }, // KIRBY PINK DREAM (ROSA SOFFICE CON TONO CILIEGIA)
+  { from: "#F0F046", to: "#325000" }, // PIKMIN BLOOM (GIALLO/VERDE BOTANICO BRILLANTE)
+  { from: "#00B4FF", to: "#000A1E" }, // STAR WARS LIGHTSABER BLUE (SPADA JEDI AZZURRA)
+  { from: "#FF0000", to: "#280000" }, // STAR WARS SITH RED (OSCURO E INTENSO)
+  { from: "#00FFF7", to: "#001414" }, // TRON LEGACY (NEON FUTURISTICO)
+  { from: "#C80000", to: "#1E0000" }, // IRON MAN (ROSSO E ORO METALLIZZATO)
+  { from: "#E60000", to: "#000A28" }, // SPIDER-MAM (ROSSO E BLU NOTTE)
+  { from: "#9A00FF", to: "#280A46" }, // GUARDIANI DELLA GALASSIA (VIOLA COSMICO)
+  { from: "#00FF66", to: "#00140A" }, // MATRIX CODE (VERDE FLUO SU NERO)
+  { from: "#F0FF00", to: "#320046" }, // CYBERPUNK 2077 (GIALLO ACIDO E VIOLA NEON)
 ];
 
 export default function Page() {
@@ -72,7 +99,7 @@ export default function Page() {
 
       {/* SWITCH */}
       <div
-        className="relative w-[96%] max-w-[1800px] aspect-[16/7]
+        className="relative w-[95%] max-w-[1800px] aspect-[16/7]
                    flex items-center justify-center"
       >
 
