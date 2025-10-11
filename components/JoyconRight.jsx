@@ -1,36 +1,31 @@
-export default function JoyconRight() {
+export default function JoyconRight({ colors }) {
   return (
     <div
-      className="relative h-full w-[11%]
-                 bg-gradient-to-br
-                 from-[#f25c5c] to-[#b94141]
-                 rounded-r-[5rem] overflow-hidden"
+      style={{ background: `linear-gradient(to bottom right, ${colors.right.from}, ${colors.right.to})`, transition: "background 0.5s ease",}}
+      className="relative h-full w-[11%] rounded-r-[5rem] overflow-hidden"
     >
 
       {/* TASTO + */}
       <div
-        className="absolute top-[5%] left-[10%]
-                   w-[20%] h-[1%] bg-gradient-to-b
-                   from-[#181818] to-[#020202]
+        className="absolute top-[5%] left-[10%] w-[20%] h-[1%]
+                   bg-gradient-to-b from-[#181818] to-[#020202]
                    rounded-md cursor-pointer
                    shadow-[inset_1px_1px_3px_rgba(255,255,255,0.25),_0_2px_3px_rgba(0,0,0,0.8)]"
       >
 
-        <div className="absolute left-1/2 top-1/2
-                        -translate-x-1/2 -translate-y-1/2
-                        w-[20%] h-[450%] bg-gradient-to-b
-                        from-[#181818] to-[#020202]
-                        rounded-md
-                        shadow-[inset_1px_1px_3px_rgba(255,255,255,0.25),_0_2px_3px_rgba(0,0,0,0.8)]"
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2
+                     -translate-y-1/2 w-[20%] h-[450%] bg-gradient-to-b
+                     from-[#181818] to-[#020202] rounded-md
+                     shadow-[inset_1px_1px_3px_rgba(255,255,255,0.25),_0_2px_3px_rgba(0,0,0,0.8)]"
         />
 
       </div>
 
       {/* TASTI A, B, X, Y */}
       <div
-        className="absolute top-[22%] left-1/2
-                   -translate-x-1/2 w-[62%]
-                   aspect-square cursor-pointer"
+        className="absolute top-[22%] left-1/2 -translate-x-1/2
+                   w-[62%] aspect-square cursor-pointer"
       >
 
         {[
@@ -65,21 +60,18 @@ export default function JoyconRight() {
 
       {/* LEVETTA ANALOGICA */}
       <div
-        className="absolute bottom-[35%] left-1/2
-                   -translate-x-1/2 w-[58%] aspect-square
-                   bg-gradient-to-b from-[#202020]
+        className="absolute bottom-[35%] left-1/2 -translate-x-1/2 w-[58%]
+                   aspect-square bg-gradient-to-b from-[#202020]
                    to-[#060606] rounded-full cursor-pointer
                    shadow-[inset_2px_2px_4px_rgba(255,255,255,0.15),_inset_-2px_-2px_6px_rgba(0,0,0,0.7)]"
       />
 
       {/* TASTO HOME */}
       <div
-        className="absolute bottom-[22%] left-[30%]
-                   -translate-x-1/2 w-[22%] aspect-square
-                   bg-gradient-to-b from-[#1b1b1b]
+        className="absolute bottom-[22%] left-[30%] -translate-x-1/2
+                   w-[22%] aspect-square bg-gradient-to-b from-[#1b1b1b]
                    to-[#0a0a0a] rounded-full cursor-pointer
-                   shadow-[inset_1px_1px_3px_rgba(255,255,255,0.15),_0_2px_3px_rgba(0,0,0,0.6)]
-                   flex items-center justify-center"
+                   shadow-[inset_1px_1px_3px_rgba(255,255,255,0.15),_0_2px_3px_rgba(0,0,0,0.6)] flex items-center justify-center"
       >
 
         <svg
