@@ -6,9 +6,8 @@ import Screen from "@/components/Screen";
 import JoyconRight from "@/components/JoyconRight";
 
 const joyconColors = [
-  { from: "#828282", to: "#0F0F0F" }, // GRIGIO
-  { from: "#FF3C28", to: "#1E0A0A" }, // NEON ROSSO
   { from: "#0AB9E6", to: "#001E1E" }, // NEON BLU
+  { from: "#FF3C28", to: "#1E0A0A" }, // NEON ROSSO
   { from: "#E6FF00", to: "#142800" }, // NEON GIALLO
   { from: "#1EDC00", to: "#002800" }, // NEON VERDE
   { from: "#FF3278", to: "#28001E" }, // NEON ROSA
@@ -29,6 +28,7 @@ const joyconColors = [
   { from: "#F07341", to: "#322D1E" }, // SCARLATTO POKEMON SCARLATTO
   { from: "#500FC8", to: "#00051E" }, // VIOLA POKEMON VIOLETTO
   { from: "#E6E6E6", to: "#323232" }, // BIANCO OLED
+  { from: "#828282", to: "#0F0F0F" }, // GRIGIO
   { from: "#6455F5", to: "#28282D" }, // BLU SPLATOON 3
   { from: "#C3FA05", to: "#1E1E28" }, // GIALLO SPLATOON 3
   { from: "#F04614", to: "#1E1914" }, // ROSSO MARIO RED X BLUE
@@ -49,6 +49,30 @@ const joyconColors = [
   { from: "#9A00FF", to: "#280A46" }, // GUARDIANI DELLA GALASSIA (VIOLA COSMICO)
   { from: "#00FF66", to: "#00140A" }, // MATRIX CODE (VERDE FLUO SU NERO)
   { from: "#F0FF00", to: "#320046" }, // CYBERPUNK 2077 (GIALLO ACIDO E VIOLA NEON)
+  { from: "#FF5E62", to: "#2C3E50" }, // TRAMONTO URBANO
+  { from: "#00C6FF", to: "#0072FF" }, // BLU MARINO PROFONDO
+  { from: "#B993D6", to: "#8CA6DB" }, // LAVANDA NOTTURNA
+  { from: "#FF6B6B", to: "#556270" }, // NEON MIAMI (RETRO ANNI '80)
+  { from: "#434343", to: "#000000" }, // CARBON TECH (MINIMAL INDUSTRIALE)
+  { from: "#00FFA3", to: "#3200FF" }, // AURORA BOREALIS (VERDE/BLU/MAGENTA)
+  { from: "#FF512F", to: "#DD2476" }, // INFERNO MAGMATICO (FUOCO FUSO)
+  { from: "#83A4D4", to: "#B6FBFF" }, // GLACIER FROST (FREDDO E PULITO)
+  { from: "#FF3C00", via: "#FFB800", to: "#FFE680" }, // MARIO FIRE FLOWER (ROSSO/ARANCIO/GIALLO FIAMMA)
+  { from: "#0AB9E6", via: "#1473FA", to: "#0A1E46" }, // ZELDA MASTER SWORD (AZZURRO/BLU/INDACO)
+  { from: "#FF3278", via: "#6B00B8", to: "#0A001E" }, // SPLATOON INK STORM (ROSA/VIOLANERO INCHIOSTRO)
+  { from: "#E6FF00", via: "#1EDC00", to: "#003214" }, // PIKMIN GARDEN (GIALLO/VERDE/FORESTA)
+  { from: "#FFD6E0", via: "#FF8BB0", to: "#7A0046" }, // KIRBY DREAMLAND (ROSA CHIARO/ROSA VINO/BORGOGNA)
+  { from: "#FF6E00", via: "#C80000", to: "#140000" }, // METROID VARIA SUIT (ARANCIO/ROSSO/SCURO PLASMA)
+  { from: "#B4F2B0", via: "#9FE6C3", to: "#3C785A" }, // ANIMAL CROSSING HORIZON (VERDE PASTELLO/MENTA/FOGLIA)
+  { from: "#00B4FF", via: "#FF0000", to: "#000A0A" }, // STAR WARS LIGHTSABER CLASH (BLU JEDI <-> ROSSO SITH)
+  { from: "#00FFF7", via: "#00A3FF", to: "#00141E" }, // TRON LEGACY GRID (CIANO NEON/BLU ELETTRICO)
+  { from: "#C80000", via: "#FFB400", to: "#1E0000" }, // IRON MAN ARC REACTOR (ROSSO/ORO/OMBRA)
+  { from: "#E60000", via: "#500FC8", to: "#000A28" }, // SPIDER VERSE (ROSSO/VIOLA/BLU NOTTE)
+  { from: "#9A00FF", via: "#00B4FF", to: "#280A46" }, // GUARDIANI DELLA GALASSIA (VIOLA/AZZURRO/NERO COSMICO)
+  { from: "#00FF66", via: "#00AA44", to: "#00140A" }, // MATRIX CODE STREAM (VERDE CHIARO/VERDE SCURO/NERO)
+  { from: "#F0FF00", via: "#FF00F0", to: "#320046" }, // CYBERPUNK NIGHT CITY (GIALLO/FUCHSIA/VIOLA)
+  { from: "#", via: "#", to: "#" }, //
+  { from: "#", via: "#", to: "#" }, //
 ];
 
 export default function Page() {

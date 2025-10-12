@@ -15,7 +15,12 @@ export default function JoyconLeft({ onChangeColor, colors }) {
 
   return (
     <div
-      style={{ background: `linear-gradient(to bottom right, ${colors.left.from}, ${colors.left.to})`, transition: "background 2s ease",}}
+      style={{
+        background: colors.left.via
+          ? `linear-gradient(to bottom right, ${colors.left.from}, ${colors.left.via}, ${colors.left.to})`
+          : `linear-gradient(to bottom right, ${colors.left.from}, ${colors.left.to})`,
+        transition: "background 2s ease"
+      }}
       className="relative h-full w-[11%] rounded-l-[5.5rem] overflow-hidden"
     >
 
