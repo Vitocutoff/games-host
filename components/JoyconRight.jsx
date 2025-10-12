@@ -1,8 +1,14 @@
 export default function JoyconRight({ colors }) {
   return (
     <div
-      style={{ background: `linear-gradient(to bottom right, ${colors.right.from}, ${colors.right.to})`, transition: "background 0.5s ease",}}
-      className="relative h-full w-[11%] rounded-r-[5rem] overflow-hidden"
+      style={{
+        background: colors.left.via
+          ? `linear-gradient(to bottom, ${colors.right.from}, ${colors.right.via}, ${colors.right.to})`
+          : `linear-gradient(to right, ${colors.right.from}, ${colors.right.to})`,
+        transition: "background 2s ease"
+      }}
+      className="relative h-full w-[11%]
+                 rounded-r-[6rem] overflow-hidden"
     >
 
       {/* TASTO + */}
