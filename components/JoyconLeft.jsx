@@ -21,7 +21,7 @@ export default function JoyconLeft({ onChangeColor, colors }) {
           : `linear-gradient(to left, ${colors.left.from}, ${colors.left.to})`,
         transition: "background 2s ease"
       }}
-      className="relative h-full w-[11%] rounded-l-[5.5rem] overflow-hidden"
+      className="relative h-full w-[11%] rounded-l-[6rem] overflow-hidden"
     >
 
       {/* TASTO MENO */}
