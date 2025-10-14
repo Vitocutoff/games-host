@@ -1,71 +1,76 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Henny_Penny, Rubik_Glitch } from "next/font/google";
+import { Russo_One } from "next/font/google";
 
-const hennyPenny = Henny_Penny({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const rubikGlitch = Rubik_Glitch({
-  weight: "400",
-  subsets: ["latin"],
-})
+const russoOne = Russo_One({ subsets: ["latin"], weight: "400" });
 
 export default function Screen() {
+  const text = "Games HUB".split("");
+
   return (
     <div
-      className={`${rubikGlitch.className} relative z-10 w-[80%] h-[100%] rounded-2xl overflow-hidden
-                 flex flex-col items-center justify-center
-                 bg-gradient-to-br from-[#101010] via-[#0c0c0c] to-[#1a1a1a]
-                 border border-neutral-700 shadow-[inset_0_0_40px_#00000080]`}
+      className={`${russoOne.className} relative w-[80%] h-[100%] rounded-2xl overflow-hidden
+                 flex flex-col items-center justify-center`}
     >
-
-      {/* bagliore dinamico dietro il logo */}
+      {/* Sfondo gradiente dinamico */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.2, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute w-[250px] h-[250px] bg-sky-700/50 blur-[150px] rounded-full"
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg, #101010 0%, #0c0c0c 50%, #1a1a1a 100%)",
+        }}
+        animate={{ rotate: [0, 0.5, -0.5, 0] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
 
-      {/* logo */}
+      {/* Glow soft dietro logo e testo */}
+      <div className="absolute inset-0 flex items-center justify-center z-0">
+        <div className="w-[250px] h-[250px] bg-sky-700/20 blur-[120px] rounded-full" />
+      </div>
+
+      {/* Logo con animazione cinematica */}
       <motion.img
         src="/logo2.png"
         alt="Games HUB logo"
-        className="w-[40px] mb-6 opacity-0 drop-shadow-[0_0_20px_#00b4ff50]"
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        className="w-[100px] mb-8 drop-shadow-[0_0_40px_#00c8ff80] z-10"
+        initial={{ opacity: 0, y: -50, scale: 0.7, rotate: -10 }}
+        animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+        transition={{ duration: 1.5, ease: [0.25, 1, 0.3, 1] }}
       />
 
-      {/* testo */}
-      <motion.span
-        className="text-6xl font-extrabold tracking-[0.3em] p-2
-                   bg-gradient-to-r from-sky-700 via-cyan-500 to-sky-700
-                   bg-clip-text text-transparent drop-shadow-[0_0_25px_#00b4ff60]
-                   select-none"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-        whileHover={{
-          scale: 1.05,
-          textShadow: "0 0 20px #00b4ff",
-        }}
-      >
-        GAMES_HUB
-      </motion.span>
+      {/* Testo principale con effetto 3D */}
+      <div className="relative flex z-10 select-none">
+        {text.map((char, i) => (
+          <motion.span
+            key={i}
+            className="text-[5rem] text-sky-600 font-bold"
+            style={{
+              textShadow:
+                "0 2px 0 #000, 0 4px 0 #111, 0 6px 0 #222, 0 8px 15px rgba(0,0,0,0.8)",
+              background: "linear-gradient(90deg, #ffffff, #c0e8ff)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "rgba(255, 255, 255, 0.8)",
+            }}
+            initial={{ opacity: 0, y: 40, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              delay: 0.5 + i * 0.08,
+              duration: 1.2,
+              ease: "easeOut",
+            }}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </div>
 
-      {/* effetto riflesso in basso */}
+      {/* Riflesso inferiore soft */}
       <motion.div
-        className="absolute bottom-0 w-full h-[120px]
-                   bg-gradient-to-t from-sky-600/10 to-transparent blur-[40px]"
+        className="absolute bottom-0 w-full h-[120px] bg-gradient-to-t from-[#00e0ff20] to-transparent blur-[60px] z-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.8, delay: 1 }}
+        transition={{ duration: 2, delay: 1.2 }}
       />
-
     </div>
   );
 }
